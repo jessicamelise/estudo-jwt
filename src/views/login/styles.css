@@ -1,0 +1,39 @@
+.nav-footer-container {
+  background-color: pink; 
+  height: 100px;
+}
+
+.form-container {
+  min-height: calc(100vh - 200px);
+}
+
+.section-login {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  min-height: calc(100vh - 200px);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 10px;
+  width: 350px;
+  border: solid 1px rgb(229, 147, 160);
+  border-radius: 5px;
+  padding: 10px 5px;
+}
+
+.button-login {
+  height: 35px;
+  background-color: rgb(229, 147, 160);
+  border-radius: 50px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.button-login:hover {
+  opacity: 0.8;
+}
