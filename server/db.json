@@ -1,5 +1,19 @@
 {
   "users": [
-    
+    {
+      "email": "lala@lala.com",
+      "password": "$2a$10$9hhNf6TdSXKf/JHSCS4EFOrIUzebeQ5i5LZwp9WJSMpd54bRV7h6G",
+      "id": 1
+    },
+    {
+      "email": "teste@teste.com",
+      "password": "$2a$10$IOu5lEWVs084yDsmBcoUkOsBPiaHLnRu24PacTEvluSkAMjE0LAk2",
+      "id": 2
+    },
+    {
+      "email": "1111@1111.com",
+      "password": "$2a$10$LneS/ApPX/Mj1EMNQth1YuRjwxyzWZVyTvj5iKXe31UMleaXPzGoG",
+      "id": 3
+    }
   ]
 }

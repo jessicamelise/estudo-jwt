@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-import { sendData } from '../../service/api';
+import { loginExistingUser, sendData } from '../../service/api';
 
 import "./styles.css";
 import TextField from '@material-ui/core/TextField';
@@ -20,17 +20,22 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [user, setUser] = useState({});
+  // const [user, setUser] = useState({});
 
   async function handleLogin(event) {
     event.preventDefault();
-    const verifyAuth = await sendData(email, password);
-    setUser(verifyAuth);
+    const verifyRegister = await sendData(email, password);
+    // setUser(verifyAuth);
 
-    if (verifyAuth.accessToken) {
-      localStorage.setItem("token", verifyAuth.accessToken);
-      localStorage.setItem("user-email", verifyAuth.user.email);
+    if (verifyRegister.accessToken) {
+      localStorage.setItem("token", verifyRegister.accessToken);
+      localStorage.setItem("user-email", verifyRegister.user.email);
       history.push(`/home`);
+    } else {
+      const login = await loginExistingUser(email, password);
+      localStorage.setItem("token", login.accessToken);
+      localStorage.setItem("user-email", login.user.email);
+      history.push('/home');
     }
 
   }
