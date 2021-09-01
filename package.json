@@ -19,7 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server -p 8000 server/db.json -m ./node_modules/json-server-auth"
+    "server": "json-server -p 8000 server/db.json -m ./node_modules/json-server-auth",
+    "commit": "cz"
   },
   "eslintConfig": {
     "extends": [
@@ -40,7 +41,14 @@
     ]
   },
   "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "json-server": "^0.16.3",
     "json-server-auth": "^2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
